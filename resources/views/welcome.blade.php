@@ -7,6 +7,6 @@
     <title>Live wire</title>
 </head>
 <body>
-    <livewire:counter />
+    <livewire:bird-form />
 </body>
 </html>
