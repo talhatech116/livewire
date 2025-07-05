@@ -22,6 +22,13 @@ class BirdForm extends Component
         $this->reset();
     }
 
+    
+    public function delete($id)
+    {
+        Entry::find($id)?->delete();
+        $this->enteries = Entry::all(); // Refresh the list after deletion
+    }
+
     public function render()
     {
         return view('livewire.bird-form', [

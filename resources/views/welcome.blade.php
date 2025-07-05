@@ -8,11 +8,7 @@
 </head>
 <body>
     <div>
-        Send Event : <livewire:send-event />
-    </div>
-
-    <div>
-        Receive Event : <livewire:receive-event />
+        <livewire:bird-form />
     </div>
 </body>
 </html>

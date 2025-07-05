@@ -15,13 +15,12 @@
 
     <div>
         @foreach ($enteries as $entry)
-            <div>
-                <strong>Count:</strong> {{ $entry->bird_count }}
+            <div wire:key="{{ $entry->id }}" wire:transition>
+                <div><strong>Count:</strong> {{ $entry->bird_count }}</div>
+                <div><strong>Notes:</strong> {{ $entry->notes }}</div>
+                <button wire:click="delete({{ $entry->id }})">Delete</button>
+                <hr>
             </div>
-            <div>
-                <strong>Notes:</strong> {{ $entry->notes }}
-            </div>
-            <hr>
         @endforeach
     </div>
 </div>
